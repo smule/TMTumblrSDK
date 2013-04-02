@@ -95,7 +95,7 @@ NSString *generateBaseString(NSString *baseURL, NSString *method, NSDictionary *
 NSString *sign(NSString *baseString, NSString *consumerSecret, NSString *tokenSecret) {
     NSString *keyString = [NSString stringWithFormat:@"%@&%@", consumerSecret, tokenSecret ? tokenSecret : @""];
     
-    return [HMACSHA1(baseString, keyString) base64EncodedString];
+    return [HMACSHA1(baseString, keyString) base64EncodedString2];
 }
 
 NSString *UNIXTimestamp(NSDate *date) {
