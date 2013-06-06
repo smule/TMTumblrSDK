@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		467DAD15170ABA9A00758CB1 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 467DAD14170ABA9A00758CB1 /* NSData+Base64.m */; };
 		467DAD1F170ABB3700758CB1 /* IACClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 467DAD17170ABB3700758CB1 /* IACClient.m */; };
 		467DAD20170ABB3700758CB1 /* IACManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 467DAD1A170ABB3700758CB1 /* IACManager.m */; };
 		467DAD21170ABB3700758CB1 /* IACRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 467DAD1C170ABB3700758CB1 /* IACRequest.m */; };
@@ -64,8 +63,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		467DAD13170ABA9A00758CB1 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
-		467DAD14170ABA9A00758CB1 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
 		467DAD16170ABB3700758CB1 /* IACClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IACClient.h; sourceTree = "<group>"; };
 		467DAD17170ABB3700758CB1 /* IACClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IACClient.m; sourceTree = "<group>"; };
 		467DAD18170ABB3700758CB1 /* IACDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IACDelegate.h; sourceTree = "<group>"; };
@@ -296,8 +293,6 @@
 		93F8E38016F92189004CA7D5 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
-				467DAD13170ABA9A00758CB1 /* NSData+Base64.h */,
-				467DAD14170ABA9A00758CB1 /* NSData+Base64.m */,
 				93F8E38C16F921C6004CA7D5 /* TMOAuth.h */,
 				93F8E38D16F921C6004CA7D5 /* TMOAuth.m */,
 				93F8E38E16F921C6004CA7D5 /* TMTumblrAuthenticator.h */,
@@ -429,7 +424,6 @@
 				9330592E16F9281500868C9C /* TMAPIClient.m in Sources */,
 				93A3902616FCE5C80045183F /* TMTumblrActivity.m in Sources */,
 				938272D3170937620025FA5C /* TMSDKFunctions.m in Sources */,
-				467DAD15170ABA9A00758CB1 /* NSData+Base64.m in Sources */,
 				467DAD1F170ABB3700758CB1 /* IACClient.m in Sources */,
 				467DAD20170ABB3700758CB1 /* IACManager.m in Sources */,
 				467DAD21170ABB3700758CB1 /* IACRequest.m in Sources */,
@@ -523,6 +517,10 @@
 				DSTROOT = /tmp/TumblrSDK.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TMTumblrSDK/TMTumblrSDK-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/**",
+					"$(SRCROOT)/../Pods/client-magic/Magic/core/helpers",
+				);
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -540,6 +538,10 @@
 				DSTROOT = /tmp/TumblrSDK.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TMTumblrSDK/TMTumblrSDK-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/**",
+					"$(SRCROOT)/../Pods/client-magic/Magic/core/helpers",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"${inherited}",
@@ -560,10 +562,8 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TMTumblrSDK/TMTumblrSDK-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
-					"${SRCROOT}/Pods/Headers/TumblrAuthentication",
-					"${SRCROOT}/Pods/Headers/NSData+Base64",
-					"${SRCROOT}/Pods/Headers/JXHTTP",
-					"${SRCROOT}/Pods/Headers",
+					"$(SRCROOT)/**",
+					"$(SRCROOT)/../Pods/client-magic/Magic/core/helpers",
 				);
 				INFOPLIST_FILE = "TMTumblrSDKTests/TMTumblrSDKTests-Info.plist";
 				ONLY_ACTIVE_ARCH = NO;
@@ -584,10 +584,8 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TMTumblrSDK/TMTumblrSDK-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
-					"${SRCROOT}/Pods/Headers/TumblrAuthentication",
-					"${SRCROOT}/Pods/Headers/NSData+Base64",
-					"${SRCROOT}/Pods/Headers/JXHTTP",
-					"${SRCROOT}/Pods/Headers",
+					"$(SRCROOT)/**",
+					"$(SRCROOT)/../Pods/client-magic/Magic/core/helpers",
 				);
 				INFOPLIST_FILE = "TMTumblrSDKTests/TMTumblrSDKTests-Info.plist";
 				OTHER_LDFLAGS = "-ObjC";
